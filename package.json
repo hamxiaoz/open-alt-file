@@ -1,0 +1,77 @@
+{
+  "name": "open-alt-file",
+  "displayName": "Open Alt File",
+  "description": "Open alternate file for your Angular component/service/pipe/directive",
+  "version": "1.0.0",
+  "publisher": "zurassic",
+  "engines": {
+    "vscode": "^1.20.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.openSpec",
+    "onCommand:extension.openSass",
+    "onCommand:extension.openHtml",
+    "onCommand:extension.openOriginal"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.openSpec",
+        "title": "spec",
+        "category": "alt (open alt file)"
+      },
+      {
+        "command": "extension.openSass",
+        "title": "sass",
+        "category": "alt (open alt file)"
+      },
+      {
+        "command": "extension.openHtml",
+        "title": "html",
+        "category": "alt (open alt file)"
+      },
+      {
+        "command": "extension.openOriginal",
+        "title": "original",
+        "category": "alt (open alt file)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.openSpec",
+        "key": "ctrl+l s",
+        "mac": "cmd+l s"
+      },
+      {
+        "command": "extension.openSass",
+        "key": "ctrl+l a",
+        "mac": "cmd+l a"
+      },
+      {
+        "command": "extension.openHtml",
+        "key": "ctrl+l h",
+        "mac": "cmd+l h"
+      },
+      {
+        "command": "extension.openOriginal",
+        "key": "ctrl+l o",
+        "mac": "cmd+l o"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6",
+    "eslint": "^4.11.0",
+    "@types/node": "^7.0.43",
+    "@types/mocha": "^2.2.42"
+  }
+}
